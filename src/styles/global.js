@@ -11,6 +11,8 @@ export default createGlobalStyle`
     --type-first: Helvetica, Arial, sans-serif;
     --type-second: 'Spectral', Georgia;
     font-family: var(--type-first);
+
+    padding-top: 4rem;
   }
 
   h1, h2, h3, h4, p {
@@ -33,5 +35,9 @@ export default createGlobalStyle`
     font-size: 1rem;
     font-family: var(--type-first);
     color: #333;
+  }
+
+  a {
+    text-decoration: none;
   }
 `;
