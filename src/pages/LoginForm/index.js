@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
+import Input from '../../components/Input'
+import Button from '../../components/Button'
+
+
 import { Section } from './styles';
 
 const LoginForm = () => {
@@ -27,9 +31,9 @@ const LoginForm = () => {
     <Section>
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
-        <input type="text" value={username} onChange={({ target }) => setUsername(target.value)}/>
-        <input type="text" value={password} onChange={({ target }) => setPassword(target.value)}/>
-        <button>Entrar</button>
+        <Input label="Usuário" type="text" name="username" />
+        <Input label="Senha" type="password" name="password" />
+        <Button>Entrar</Button>
       </form>
       <Link to="/login/criar">Cadastro</Link>
     </Section>
