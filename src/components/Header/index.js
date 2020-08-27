@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+
+import { UserContext } from '../../contexts/UserContext';
 
 import { HeaderContainer, NavContainer } from './styles';
 
 import {ReactComponent as Dogs} from '../../assets/dogs.svg'
 
 const Header = () => {
+  const { data } = useContext(UserContext);
+
   return (
     <HeaderContainer>
       <NavContainer>
         <Link className="dogs" to="/" aria-label="Dogs - Home">
           <Dogs />
         </Link>
-        <Link className="login" to="/login">Login / Criar</Link>
+        {data ? (
+          <Link className="login" to="/conta">{data.nome}</Link>
+        ) : (
+          <Link className="login" to="/login">Login / Criar</Link>
+        )}
       </NavContainer>
     </HeaderContainer>
   )
