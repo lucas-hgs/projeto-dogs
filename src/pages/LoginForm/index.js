@@ -7,8 +7,9 @@ import { UserContext } from '../../contexts/UserContext';
 
 import Input from '../../components/Input'
 import Button from '../../components/Button'
+import Error from '../../components/Error'
 
-import { Section } from './styles';
+import { Section, Form, Register } from './styles';
 
 const LoginForm = () => {
   const username = useForm();
@@ -25,15 +26,23 @@ const LoginForm = () => {
   }
 
   return (
-    <Section>
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
+    <Section className={"animeLeft"}>
+      <h1 className={"title"}>Login</h1>
+
+      <Form onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" name="username" {...username} />
         <Input label="Senha" type="password" name="password" {...password} />
         {loading ? <Button disabled>Carregando...</Button> : <Button>Entrar</Button>}
-        {error && <p>{error}</p>}
-      </form>
-      <Link to="/login/criar">Cadastro</Link>
+        <Error error={error} />
+      </Form>
+
+      <Link className={"perdeu"} to="/login/perdeu">Perdeu a senha?</Link>
+
+      <Register>
+        <h2 className={"subtitle"}>Cadastre-se</h2>
+        <p>Ainda não possui conta? Cadastre-se no site.</p>
+        <Button><Link to="/login/criar">Cadastro</Link></Button>
+      </Register>
     </Section>
   )
 }
