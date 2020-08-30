@@ -9,7 +9,7 @@ import LoginPasswordLost from '../LoginPasswordLost/'
 import LoginPasswordReset from '../LoginPasswordReset/'
 
 
-import { Container } from './styles';
+import { Container, DivForms } from './styles';
 
 const Login = () => {
   const { login } = useContext(UserContext);
@@ -20,12 +20,14 @@ const Login = () => {
 
   return (
     <Container>
-      <Routes>
-        <Route path="/" element={<LoginForm />} />
-        <Route path="criar" element={<LoginCreate />} />
-        <Route path="perdeu" element={<LoginPasswordLost />} />
-        <Route path="resetar" element={<LoginPasswordReset />} />
-      </Routes>
+      <DivForms>
+        <Routes>
+          <Route path="/" element={<LoginForm />} />
+          <Route path="criar" element={<LoginCreate />} />
+          <Route path="perdeu" element={<LoginPasswordLost />} />
+          <Route path="resetar" element={<LoginPasswordReset />} />
+        </Routes>
+      </DivForms>
     </Container>
   )
 }
