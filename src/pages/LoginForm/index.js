@@ -41,7 +41,7 @@ const LoginForm = () => {
       <Register>
         <h2 className={"subtitle"}>Cadastre-se</h2>
         <p>Ainda não possui conta? Cadastre-se no site.</p>
-        <Button><Link to="/login/criar">Cadastro</Link></Button>
+        <Link className={"btnAnchor"} to="/login/criar">Cadastro</Link>
       </Register>
     </Section>
   )
