@@ -4,14 +4,14 @@ import { Container } from './styles';
 
 import Input from '../../components/Input';
 import Button from '../../components/Button';
-import Error from '../../components/Error';
+import Error from '../../utils/Error';
 
 import useForm from '../../hooks/useForm';
 import useFetch from '../../hooks/useFetch';
 
 import { UserContext } from '../../contexts/UserContext';
 
-import { USER_POST } from '../../api';
+import { USER_POST } from '../../utils/api';
 
 const LoginCreate = () => {
   const username = useForm();

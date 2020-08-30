@@ -7,7 +7,7 @@ import { UserContext } from '../../contexts/UserContext';
 
 import Input from '../../components/Input'
 import Button from '../../components/Button'
-import Error from '../../components/Error'
+import Error from '../../utils/Error'
 
 import { Section, Form, Register } from './styles';
 
