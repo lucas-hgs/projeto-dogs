@@ -1,9 +1,13 @@
 import React from 'react'
 
+import FeedModal from '../FeedModal';
+import FeedPhotos from '../FeedPhotos';
+
 const index = () => {
   return (
     <div>
-      Feed
+      <FeedModal />
+      <FeedPhotos />
     </div>
   )
 }

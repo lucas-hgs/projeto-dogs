@@ -1,12 +1,14 @@
 import React from 'react'
 
-import { Container } from './styles';
+import Feed from '../Feed';
+
+import { Section } from './styles';
 
 const Home = () => {
   return (
-    <Container>
-      <h1>Home</h1>
-    </Container>
+    <Section className="container mainContainer">
+      <Feed />
+    </Section>
   )
 }
 
